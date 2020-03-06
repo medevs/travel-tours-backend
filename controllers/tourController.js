@@ -18,7 +18,7 @@ exports.checkBody = (req, res, next) => {
     return res.status(400).json({
       status: 'Fail',
       message: 'Missing name or price'
-    })
+    });
   }
   next();
 }
@@ -61,7 +61,7 @@ exports.updateTour = (req, res) => {
   res.status(200).json({
     status: 'success',
     data: 'Updated tour ...'
-  })
+  });
 }
 
 // Delete Tour
@@ -69,5 +69,5 @@ exports.deleteTour = (req, res) => {
   res.status(204).json({
     status: 'success',
     data: null
-  })
+  });
 }
