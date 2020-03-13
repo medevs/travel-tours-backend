@@ -4,3 +4,5 @@ dev-data/
 .prettierrc
 .eslintrc.json
 
+
+.now

@@ -1,20 +1,36 @@
 {
   "name": "travel-tours",
   "version": "1.0.0",
-  "description": "Travel Tours Company",
-  "main": "app.js",
+  "description": "Travel Tours Web App",
+  "main": "server.js",
   "scripts": {
-    "start:dev": "nodemon server.js",
+    "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-oublihi/travel-tours-backend.git"
+  },
+  "keywords": [
+    "Morocco",
+    "Travel",
+    "Tours"
+  ],
   "author": "Ahmed Oublihi",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "slugify": "^1.4.0",
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ahmed-oublihi/travel-tours-backend/issues"
+  },
+  "homepage": "https://github.com/ahmed-oublihi/travel-tours-backend#readme"
 }
