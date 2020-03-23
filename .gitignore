@@ -4,6 +4,6 @@ dev-data/
 .prettierrc
 .eslintrc.json
 
-config.env
+.config.env
 
 .now
