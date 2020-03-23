@@ -49,7 +49,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.pre('save', async function(next) {
-  // Only Run thi Fc if Password Was Modified
+  // Only Run thi Func if Password Was Modified
   if(!this.isModified('password')) return next();
 
   // Hash The Password
