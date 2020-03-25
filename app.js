@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
-const mongoSanitize = require('mongoSanitize');
+// const mongoSanitize = require('mongoSanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 
@@ -11,6 +11,7 @@ const globalErrorHandler = require('./controllers/errorController')
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
+const reviewRouter = require('./routes/reviewRoutes')
 
 const app = express();
 
@@ -39,7 +40,7 @@ app.use(express.json({
 }));
 
 // Data Sanitization Against NoSQL query Injection
-app.use(mongoSanitize());
+// app.use(mongoSanitize());
 
 // Data Sanitization against XSS attacks
 app.use(xss());
@@ -70,6 +71,7 @@ app.use((req, res, next) => {
 // ------- ROUTES --------- //
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 // Unhandled Routes
 app.all('*', (req, res, next) => {  
