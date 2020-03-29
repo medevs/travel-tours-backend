@@ -24,6 +24,10 @@ router
     authController.protect, 
     authController.restrictTo('admin', 'lead-guide', 'guide'),tourCnotroller.getMonthlyPlan);
 
+router.route('/touts-within/:distance/center/:latlng/unit/:unit').get(tourCnotroller.getToursWithin);
+
+router.route('/distances/:latlng/unit/:unit').get(tourCnotroller.getDistances);
+
 router
   .route('/')
   .get(tourCnotroller.getAllTours)
