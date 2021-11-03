@@ -33,7 +33,7 @@
     "ndb": "^1.1.5",
     "nodemailer": "^6.4.16",
     "slugify": "^1.4.0",
-    "validator": "^12.2.0",
+    "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
